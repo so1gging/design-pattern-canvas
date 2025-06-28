@@ -1,20 +1,17 @@
-class Grimpan {
-  private static instance: Grimpan;
-  private constructor(canvas: HTMLElement | null) {
-    if (!canvas || !(canvas instanceof HTMLCanvasElement)) {
-      throw new Error("canvas 엘리먼트를 입력하세요.");
-    }
-  }
+import Grimpan from "./AbstractGrimpan.js";
 
-  initialize() {}
-  initializeMenu() {}
+class IEGrimpan extends Grimpan {
+  private static instance: IEGrimpan;
 
-  static getInstance() {
+  override initialize() {}
+  override initializeMenu() {}
+
+  static override getInstance() {
     if (!this.instance) {
-      this.instance = new Grimpan(document.querySelector("#canvas"));
+      this.instance = new IEGrimpan(document.querySelector("canvas"));
     }
     return this.instance;
   }
 }
 
-export default Grimpan;
+export default IEGrimpan;
