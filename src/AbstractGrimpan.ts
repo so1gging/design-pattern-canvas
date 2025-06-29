@@ -1,5 +1,4 @@
 export default abstract class Grimpan {
-  // 재정의 가능
   protected constructor(canvas: HTMLElement | null) {
     if (!canvas || !(canvas instanceof HTMLCanvasElement)) {
       throw new Error("canvas 엘리먼트를 입력하세요");
@@ -7,7 +6,6 @@ export default abstract class Grimpan {
   }
 
   abstract initialize(): void;
-  abstract initializeMenu(): void;
 
   static getInstance() {}
 }
