@@ -1,3 +1,5 @@
 # Design pattern with Typescript
 
-[Singleton](./docs/Singleton.md)
+- [Singleton](./docs/Singleton.md)
+- [Simple Factory](./docs/Simple_Factory.md)
+- [Factory Method](./docs/Simple_Factory.md)
